@@ -1,0 +1,100 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+.heroSectionContainer {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  padding: 2rem 3rem;
+  position: fixed;
+  background-image: url("../../assets/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+  @include breakpoint(md) {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .heroSectionContent {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+
+    .heroSectionTitle {
+      font-size: 9rem;
+      font-weight: bolder;
+      margin: 0;
+      color: $primary-500;
+
+      @include text-shadow($primary-100);
+      @include breakpoint(md) {
+        font-size: 6rem;
+      }
+      @include breakpoint(sm) {
+        font-size: 4rem;
+      }
+    }
+
+    .heroSectionSubtitle {
+      color: $primary-100;
+      font-family: $font-primary;
+      font-size: 2rem;
+      font-weight: 400;
+      @include breakpoint(md) {
+        font-size: 1.5rem;
+        color: $primary-700;
+      }
+      @include breakpoint(sm) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .btn {
+      background-color: $accent-500;
+      color: white;
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $accent-600;
+        transform: scale(1.05);
+      }
+      @include breakpoint(md) {
+        font-size: 0.7rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  }
+
+  .profileImage {
+    width: 400px;
+    height: 450px;
+    border: 5px solid white;
+    @include breakpoint(md) {
+      width: 300px;
+      height: 350px;
+      border-radius: 50%;
+    }
+    @include breakpoint(sm) {
+      width: 200px;
+      height: 250px;
+    }
+    @include breakpoint(xs) {
+      width: 150px;
+      height: 200px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+/* Define SCSS variables */
+@import "mixins";
+
+$font-primary: var(--font-inter);
+$font-secondary: var(--font-playwrite-ar);
+$font-accent: var(--font-dancing-script);
+
+// Colors
+$white: #fff;
+$black: #000;
+$gray: #dbe2e9;
+// Status Colors
+$primary: #2f8aa0;
+$secondary: #7b92ae;
+$neutral: #dbe2e9;
+$accent: #b96074;
+$success: #009a51;
+$info: #004481;
+$warning: #ffc107;
+$danger: #dc3545;
+
+$primary-100: tint-color($primary, 80%);
+$primary-200: tint-color($primary, 60%);
+$primary-300: tint-color($primary, 40%);
+$primary-400: tint-color($primary, 20%);
+$primary-500: $primary;
+$primary-600: shade-color($primary, 20%);
+$primary-700: shade-color($primary, 40%);
+$primary-800: shade-color($primary, 60%);
+$primary-900: shade-color($primary, 80%);
+
+$secondary-100: tint-color($secondary, 80%);
+$secondary-200: tint-color($secondary, 60%);
+$secondary-300: tint-color($secondary, 40%);
+$secondary-400: tint-color($secondary, 20%);
+$secondary-500: $secondary;
+$secondary-600: shade-color($secondary, 20%);
+$secondary-700: shade-color($secondary, 40%);
+$secondary-800: shade-color($secondary, 60%);
+$secondary-900: shade-color($secondary, 80%);
+
+$neutral-100: tint-color($neutral, 80%);
+$neutral-200: tint-color($neutral, 60%);
+$neutral-300: tint-color($neutral, 40%);
+$neutral-400: tint-color($neutral, 20%);
+$neutral-500: $neutral;
+$neutral-600: shade-color($neutral, 20%);
+$neutral-700: shade-color($neutral, 40%);
+$neutral-800: shade-color($neutral, 60%);
+$neutral-900: shade-color($neutral, 80%);
+
+$accent-100: tint-color($accent, 80%);
+$accent-200: tint-color($accent, 60%);
+$accent-300: tint-color($accent, 40%);
+$accent-400: tint-color($accent, 20%);
+$accent-500: $accent;
+$accent-600: shade-color($accent, 20%);
+$accent-700: shade-color($accent, 40%);
+$accent-800: shade-color($accent, 60%);
+$accent-900: shade-color($accent, 80%);

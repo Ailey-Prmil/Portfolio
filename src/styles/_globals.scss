@@ -1,0 +1,16 @@
+@import "variables";
+
+body {
+  font-family: $font-primary;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: $font-accent;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}

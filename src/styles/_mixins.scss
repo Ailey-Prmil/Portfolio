@@ -1,0 +1,38 @@
+@mixin breakpoint($size) {
+  @if $size == xs {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (max-width: 750px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  }
+}
+
+@function tint-color($color, $amount) {
+  @return mix(white, $color, $amount);
+}
+
+@function shade-color($color, $amount) {
+  @return mix(black, $color, $amount);
+}
+
+@mixin text-shadow($color: black, $x: 2px, $y: 2px, $blur: 4px) {
+  text-shadow: $x $y $blur $color;
+}
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 4px, $color: rgba(0, 0, 0, 0.5)) {
+  box-shadow: $x $y $blur $color;
+}
