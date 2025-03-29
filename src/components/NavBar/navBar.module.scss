@@ -1,6 +1,6 @@
 // Description: This file contains the styles for the NavBar component.
 @use "@/styles/variables.scss" as var;
-@use "@/styles/mixins.scss" as mixin;
+@use "@/styles/mixins.scss" as mixins;
 
 .navBar {
   width: device-width;
@@ -13,12 +13,20 @@
   position: sticky;
   top: 0;
   z-index: 100;
+
+  @include mixins.breakpoint(sm) {
+    height: 1.5rem;
+    padding: 0.5rem 0.5rem;
+  }
 }
 .navBarLogo {
   font-family: var.$font-accent;
   font-size: 1.75rem;
   font-weight: bold;
   color: white;
+  @include mixins.breakpoint(sm) {
+    font-size: 1rem;
+  }
 }
 
 .navBarItems {
@@ -26,6 +34,9 @@
   gap: 2rem;
   flex-grow: 2;
   justify-content: flex-end;
+  @include mixins.breakpoint(sm) {
+    gap: 1rem;
+  }
 }
 
 .navItem {
@@ -35,6 +46,11 @@
   color: white;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease-in-out;
+
+  @include mixins.breakpoint(sm) {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.7rem;
+  }
 
   &:hover {
     color: var.$primary-200;

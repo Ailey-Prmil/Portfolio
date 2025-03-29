@@ -1,10 +1,17 @@
 @import "variables";
+@import "mixins";
 
+::-webkit-scrollbar {
+  display: none;
+}
 body {
   font-family: $font-primary;
-  margin: 0;
+  caret-color: transparent;
+  overflow-x: hidden;
 }
-
+.primary-header-text {
+  @include primary-header($font-primary, $primary-100);
+}
 h1,
 h2 {
   font-family: $font-accent;
@@ -13,4 +20,10 @@ h2 {
 h1 {
   font-size: 5rem;
   font-weight: bold;
+  @include breakpoint(md) {
+    font-size: 3.5rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 2rem;
+  }
 }

@@ -1,5 +1,6 @@
-@import "@/styles/variables.scss";
-@import "@/styles/mixins.scss";
+@use "src/styles/variables" as var;
+@use "src/styles/mixins" as mixins;
+
 .heroSectionContainer {
   display: flex;
   box-sizing: border-box;
@@ -13,9 +14,9 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 0;
 
-  @include breakpoint(md) {
+  @include mixins.breakpoint(md) {
     padding: 2rem 1rem;
     flex-direction: column;
     gap: 2rem;
@@ -35,33 +36,30 @@
       font-size: 9rem;
       font-weight: bolder;
       margin: 0;
-      color: $primary-500;
+      color: var.$primary-500;
 
-      @include text-shadow($primary-100);
-      @include breakpoint(md) {
+      @include mixins.text-shadow(var.$primary-100);
+      @include mixins.breakpoint(md) {
         font-size: 6rem;
       }
-      @include breakpoint(sm) {
+      @include mixins.breakpoint(sm) {
         font-size: 4rem;
       }
     }
 
     .heroSectionSubtitle {
-      color: $primary-100;
-      font-family: $font-primary;
-      font-size: 2rem;
-      font-weight: 400;
-      @include breakpoint(md) {
+      @include mixins.primary-header(var.$font-primary, var.$primary-100);
+      @include mixins.breakpoint(md) {
         font-size: 1.5rem;
-        color: $primary-700;
+        color: var.$primary-700;
       }
-      @include breakpoint(sm) {
+      @include mixins.breakpoint(sm) {
         font-size: 1.2rem;
       }
     }
 
     .btn {
-      background-color: $accent-500;
+      background-color: var.$accent-500;
       color: white;
       font-size: 1rem;
       padding: 0.75rem 1.5rem;
@@ -69,10 +67,10 @@
       text-decoration: none;
       transition: all 0.3s ease-in-out;
       &:hover {
-        background-color: $accent-600;
+        background-color: var.$accent-600;
         transform: scale(1.05);
       }
-      @include breakpoint(md) {
+      @include mixins.breakpoint(md) {
         font-size: 0.7rem;
         padding: 0.8rem 1.5rem;
       }
@@ -83,16 +81,16 @@
     width: 400px;
     height: 450px;
     border: 5px solid white;
-    @include breakpoint(md) {
+    @include mixins.breakpoint(md) {
       width: 300px;
       height: 350px;
       border-radius: 50%;
     }
-    @include breakpoint(sm) {
+    @include mixins.breakpoint(sm) {
       width: 200px;
       height: 250px;
     }
-    @include breakpoint(xs) {
+    @include mixins.breakpoint(xs) {
       width: 150px;
       height: 200px;
     }

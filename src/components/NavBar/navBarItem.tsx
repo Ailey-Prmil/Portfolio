@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import styles from "./navBar.module.scss";
 import { usePathname } from "next/navigation";
 
@@ -15,11 +16,15 @@ export default function NavBarItem({
   const isActive = pathName === href;
 
   return (
-    <Link
-      href={href}
-      className={`${styles.navItem} ${isActive ? styles.active : ""}`}
-    >
-      {children}
+    <Link href={href} scroll={false}>
+      <motion.div
+        layout
+        className={`${styles.navItem} ${isActive ? styles.active : ""}`}
+        transition={{ duration: 0.2 }}
+      >
+        {children}
+      </motion.div>
+      {/* {isActive && <motion.div layoutId="underline"></motion.div>} */}
     </Link>
   );
 }

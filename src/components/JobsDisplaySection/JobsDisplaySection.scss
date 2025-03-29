@@ -1,0 +1,49 @@
+// "px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+// overflow-hidden pb-0.5 sm:pb-1 md:pb-1
+@use "@/styles/variables" as var;
+@use "@/styles/mixins" as *;
+.job-section-full-text-container {
+  max-width: 1200px;
+  max-height: fit-content;
+  margin: 0rem 1rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  h1 {
+    font-weight: 900;
+  }
+  .gradient-text {
+    width: 100%;
+    margin-left: 1rem;
+    display: flexbox;
+    justify-content: flex-end;
+  }
+}
+.job-section-text-container {
+  margin-right: 1rem;
+  padding: 1rem 2rem;
+  background: var.$primary-500;
+  border-radius: 1rem;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  @include box-shadow;
+
+  @include breakpoint(md) {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+  @include breakpoint(sm) {
+    margin-left: 1rem;
+    font-size: 0.7rem;
+    padding: 1rem 1rem;
+  }
+
+  .job-section-text {
+    overflow: hidden;
+  }
+}

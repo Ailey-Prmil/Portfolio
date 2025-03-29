@@ -1,5 +1,5 @@
 /* Define SCSS variables */
-@import "mixins";
+@use "mixins" as *;
 
 $font-primary: var(--font-inter);
 $font-secondary: var(--font-playwrite-ar);

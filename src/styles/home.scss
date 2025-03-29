@@ -1,25 +1,35 @@
+@use "variables" as var;
+
+.wrapper {
+  overflow-x: hidden;
+  width: device-width;
+}
+.scrollContainer {
+  overflow: auto; // Enables scrolling for the whole section
+  width: 100%;
+  position: relative;
+}
 .elipse {
-  position: absolute;
-  top: 155%;
+  position: relative;
+  top: 150vh;
   left: 50%;
   width: 200vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
   transform: translate(-50%, -50%);
-  z-index: -1; /* Behind all other content */
-  background-color: white; /* Semi-transparent black */
+  z-index: 0; /* Behind all other content */
+  background-color: var.$gray;
   border-radius: 50%; /* Circular shape */
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
 }
 .content {
   position: relative;
+  width: 100vw;
   height: 200vh; /* Full viewport height */
-  top: 100vh; /* Push content down by hero height */
+  top: 10vh; /* Push content down by hero height */
   z-index: 20; /* Above hero section */
-  background: white; /* Or your preferred background */
+  background: var.$gray; /* Or your preferred background */
 
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
-  padding: 2rem 3rem;
 }
