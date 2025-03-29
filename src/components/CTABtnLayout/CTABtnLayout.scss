@@ -1,0 +1,27 @@
+@use "@/styles/mixins" as mixins;
+
+.cta-btn-layout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "cert project"
+    "resume"
+    "connect";
+}
+
+.cert-cta-container {
+  grid-area: cert;
+}
+
+.project-cta-container {
+  grid-area: project;
+}
+
+.resume-cta-container {
+  grid-area: resume;
+}
+
+.connect-cta-container {
+  grid-area: connect;
+}
