@@ -1,0 +1,43 @@
+@use "@/styles/mixins" as mixins;
+@use "@/styles/variables" as var;
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var.$neutral-200;
+  padding: 1rem 15rem;
+  gap: 2rem;
+  @include mixins.breakpoint(md) {
+    padding: 2rem;
+  }
+  h1 {
+    @include mixins.primary-header(var.$font-accent, var.$primary-500, 5);
+  }
+  .divider {
+    width: 90%;
+    height: 5px;
+    background-color: var.$primary-600;
+    filter: blur(1px);
+    border-radius: 50%;
+  }
+  .job-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    .job-title {
+      background-color: var.$secondary-200;
+      color: var.$black;
+      border-radius: 2rem;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+
+  .self-description {
+    p {
+      font-size: 1rem;
+    }
+  }
+}

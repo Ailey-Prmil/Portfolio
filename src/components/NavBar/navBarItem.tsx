@@ -16,7 +16,7 @@ export default function NavBarItem({
   const isActive = pathName === href;
 
   return (
-    <Link href={href} scroll={false}>
+    <Link href={href} scroll={false} className={styles.link}>
       <motion.div
         layout
         className={`${styles.navItem} ${isActive ? styles.active : ""}`}

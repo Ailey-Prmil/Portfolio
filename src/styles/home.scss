@@ -24,7 +24,7 @@
 .content {
   position: relative;
   width: 100vw;
-  height: 200vh; /* Full viewport height */
+  height: fit-content; /* Full viewport height */
   top: 10vh; /* Push content down by hero height */
   z-index: 20; /* Above hero section */
   background: var.$gray; /* Or your preferred background */

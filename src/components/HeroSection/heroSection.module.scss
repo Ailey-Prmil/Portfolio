@@ -48,7 +48,7 @@
     }
 
     .heroSectionSubtitle {
-      @include mixins.primary-header(var.$font-primary, var.$primary-100);
+      @include mixins.primary-header(var.$font-primary, var.$primary-100, 1);
       @include mixins.breakpoint(md) {
         font-size: 1.5rem;
         color: var.$primary-700;

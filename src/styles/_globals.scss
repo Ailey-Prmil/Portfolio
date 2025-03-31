@@ -5,12 +5,13 @@
   display: none;
 }
 body {
+  margin: 0;
   font-family: $font-primary;
   caret-color: transparent;
   overflow-x: hidden;
 }
 .primary-header-text {
-  @include primary-header($font-primary, $primary-100);
+  @include primary-header($font-primary, $primary-100, 1);
 }
 h1,
 h2 {
@@ -26,4 +27,8 @@ h1 {
   @include breakpoint(sm) {
     font-size: 2rem;
   }
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }

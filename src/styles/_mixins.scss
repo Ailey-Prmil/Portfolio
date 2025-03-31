@@ -44,17 +44,17 @@
   align-items: center;
   gap: $gap;
 }
-@mixin primary-header($font-family, $color) {
+@mixin primary-header($font-family, $color, $scale: 1) {
   font-family: $font-family;
-  font-size: 2rem;
+  font-size: 2rem * $scale;
   font-weight: 400;
   color: $color;
   text-align: center;
   margin: 0;
   @include breakpoint(md) {
-    font-size: 1.75rem;
+    font-size: 1.75rem * $scale;
   }
   @include breakpoint(sm) {
-    font-size: 1.2rem;
+    font-size: 1.2rem * $scale;
   }
 }

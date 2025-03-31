@@ -38,9 +38,10 @@
     gap: 1rem;
   }
 }
-
-.navItem {
+.link {
   text-decoration: none;
+}
+.navItem {
   font-family: var.$font-primary;
   font-weight: bold;
   color: white;
