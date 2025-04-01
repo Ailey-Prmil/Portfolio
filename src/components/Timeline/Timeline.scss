@@ -1,0 +1,80 @@
+@use "@/styles/variables" as var;
+@use "@/styles/mixins" as mixins;
+
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
+
+  .timeline-line {
+    position: absolute;
+    left: 2rem;
+    width: 4px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var.$primary-500;
+  }
+}
+
+.timeline-point {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem 0;
+  position: relative;
+
+  .timeline-content {
+    margin-left: 4rem; // 2rem from the line + 2rem from the marker
+    padding-left: 2rem;
+    text-align: left;
+    width: calc(100% - 4rem);
+
+    .date {
+      color: var.$primary-500;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      @include mixins.primary-header(var.$font-secondary, var.$black, 1.5);
+      margin: 0.5rem 0;
+    }
+
+    .organization {
+      @include mixins.primary-header(var.$font-primary, var.$primary-600, 1.2);
+      font-weight: 700;
+      margin: 0.75rem 0;
+    }
+
+    .description {
+      margin-top: 1rem;
+      color: var.$black;
+      p {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  .timeline-marker {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var.$primary-500;
+    z-index: 1;
+    left: 1.6rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      background-color: var.$primary-500;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+}

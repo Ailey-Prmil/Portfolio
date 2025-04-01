@@ -5,8 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var.$neutral-200;
-  padding: 1rem 15rem;
+  background-color: var.$neutral-100;
+  padding: 1rem 8rem;
   gap: 2rem;
   @include mixins.breakpoint(md) {
     padding: 2rem;
@@ -14,10 +14,15 @@
   h1 {
     @include mixins.primary-header(var.$font-accent, var.$primary-500, 5);
   }
+  h2 {
+    @include mixins.primary-header(var.$font-secondary, var.$primary-500, 3);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
   .divider {
-    width: 90%;
-    height: 5px;
-    background-color: var.$primary-600;
+    width: 80%;
+    height: 3px;
+    background-color: var.$primary-500;
     filter: blur(1px);
     border-radius: 50%;
   }
@@ -37,7 +42,134 @@
 
   .self-description {
     p {
+      margin: 0.5rem 6rem;
       font-size: 1rem;
+    }
+  }
+
+  .skills-section {
+    width: 100%;
+    text-align: center;
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 0 2rem;
+
+      .skill-category {
+        border-radius: 1rem;
+
+        h3 {
+          @include mixins.primary-header(var.$font-secondary, var.$black, 2);
+
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        .skills-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+          padding: 1rem;
+
+          .skill-card {
+            background-color: var.$primary-100;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+            &:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .skill-logo {
+              width: 64px;
+              height: 64px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: var.$neutral-100;
+              border-radius: 50%;
+              padding: 0.5rem;
+
+              .logo-image {
+                width: 48px;
+                height: 48px;
+                object-fit: contain;
+              }
+            }
+
+            .skill-info {
+              text-align: center;
+              width: 100%;
+
+              h4 {
+                color: var.$primary-600;
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .certificates-section {
+    width: 100%;
+    text-align: center;
+
+    .certificates-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 0 2rem;
+
+      .certificate-card {
+        background-color: var.$primary-100;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        h3 {
+          @include mixins.primary-header(var.$font-primary, var.$black, 1.2);
+
+          margin-bottom: 1rem;
+        }
+
+        p {
+          margin: 0.5rem 0;
+          color: var.$black;
+
+          &.issuer {
+            color: var.$primary-500;
+            font-weight: bold;
+          }
+
+          &.date {
+            color: var.$neutral-600;
+            font-size: 0.9rem;
+          }
+
+          &.credential {
+            font-size: 0.8rem;
+            color: var.$neutral-500;
+          }
+        }
+      }
     }
   }
 }

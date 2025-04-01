@@ -17,7 +17,7 @@
   height: 100vh; /* Full viewport height */
   transform: translate(-50%, -50%);
   z-index: 0; /* Behind all other content */
-  background-color: var.$gray;
+  background-color: var.$white;
   border-radius: 50%; /* Circular shape */
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
 }
@@ -27,7 +27,7 @@
   height: fit-content; /* Full viewport height */
   top: 10vh; /* Push content down by hero height */
   z-index: 20; /* Above hero section */
-  background: var.$gray; /* Or your preferred background */
+  background: var.$white; /* Or your preferred background */
 
   display: flex;
   align-items: center;

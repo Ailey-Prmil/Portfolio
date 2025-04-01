@@ -74,7 +74,7 @@ $cta-btns: cert project resume connect;
       .illustration {
         width: 50%;
         height: 90%;
-        background-image: url("../../assets/" + $cta + ".png");
+        background-image: url("/" + $cta + ".png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;

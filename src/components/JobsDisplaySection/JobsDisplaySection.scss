@@ -11,7 +11,7 @@
   align-items: center;
   justify-items: center;
   width: 100%;
-  background-image: url("../../assets/svgs/SVG\ curve.svg");
+  background-image: url("/public/svgs/SVG\ curve.svg");
   background-size: 650px 260px;
   background-position-y: top;
   background-repeat: round;
@@ -19,7 +19,7 @@
     font-weight: 900;
   }
   .gradient-text {
-    background-color: var.$gray;
+    background-color: var.$white;
     width: 100%;
     margin-left: 1rem;
     display: flexbox;

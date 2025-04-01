@@ -3,9 +3,7 @@ import "./CTABtnLayout.scss";
 import Link from "next/link";
 import CTABtn from "./CTABtn";
 import Image from "next/image";
-import GmailIcon from "@/assets/gmail.png";
-import GithubIcon from "@/assets/github.png";
-import LinkedinIcon from "@/assets/linkedin.png";
+
 export default function CTABtnLayout() {
   return (
     <div className="cta-btn-layout-container">
@@ -27,13 +25,28 @@ export default function CTABtnLayout() {
           <div className="contact-text">Reach out to me via</div>
           <div className="contact-placeholder">
             <Link href="mailto:lammaituyen949@gmail.com">
-              <Image src={GmailIcon} alt="my-mail"></Image>
+              <Image
+                src="/connect/gmail.png"
+                alt="my-mail"
+                width={24}
+                height={24}
+              />
             </Link>
             <Link href="https://www.linkedin.com/in/lmtuyen/">
-              <Image src={LinkedinIcon} alt="my-linkedIn"></Image>
+              <Image
+                src="/connect/linkedin.png"
+                alt="my-linkedIn"
+                width={24}
+                height={24}
+              />
             </Link>
             <Link href="https://github.com/Ailey-Prmil">
-              <Image src={GithubIcon} alt="my-gitHub"></Image>
+              <Image
+                src="/connect/github.png"
+                alt="my-gitHub"
+                width={24}
+                height={24}
+              />
             </Link>
           </div>
         </div>
