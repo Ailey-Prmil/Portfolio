@@ -17,7 +17,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         </button>
         <h2>{project.name}</h2>
         <div className="modal-details">
-          <h3>What I did?</h3>
+          <h3>What I did</h3>
           <ul>
             {project.details.map((detail, index) => (
               <li key={index}>{detail}</li>

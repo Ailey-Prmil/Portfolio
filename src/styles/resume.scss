@@ -1,0 +1,31 @@
+@use "variables" as var;
+@use "mixins" as mixin;
+
+.resumeContainer {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var.$neutral-100;
+}
+
+.title {
+  @include mixin.primary-header(var.$font-secondary, var.$primary-500, 2);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.resumeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pdfViewer {
+  width: 100%;
+  height: 90vh;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
