@@ -1,0 +1,183 @@
+@use "./variables.scss" as var;
+@use "./mixins.scss" as mixin;
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  h1 {
+    @include mixin.primary-header(var.$font-secondary, var.$primary-500, 2);
+    font-weight: 900;
+    margin-bottom: 2rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var.$secondary-200;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var.$accent-500;
+  }
+
+  .project-date {
+    color: var.$primary-800;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-team {
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 0.9rem;
+      color: var.$primary-800;
+
+      &:first-child {
+        font-weight: 500;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    .tech-pill {
+      background: var.$primary-500;
+      color: var.$white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+
+  .project-description {
+    color: var.$black;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+
+  .project-link {
+    background-color: var.$primary-400;
+    color: var.$white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var.$primary-600;
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var.$white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+
+  h2 {
+    color: var.$accent-500;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var.$primary-800;
+    padding: 0.5rem;
+    line-height: 1;
+  }
+
+  .modal-details {
+    margin: 1.5rem 0;
+
+    h3 {
+      color: var.$primary-800;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        color: var.$primary-800;
+      }
+    }
+  }
+  .modal-github-link {
+    color: var.$primary-500;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
