@@ -15,7 +15,7 @@
     @include mixins.primary-header(var.$font-accent, var.$primary-500, 5);
   }
   h2 {
-    @include mixins.primary-header(var.$font-secondary, var.$primary-500, 3);
+    @include mixins.primary-header(var.$font-secondary, var.$primary-500, 2.5);
     margin-top: 2rem;
     margin-bottom: 2rem;
   }

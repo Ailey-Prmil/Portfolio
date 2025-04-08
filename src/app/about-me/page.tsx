@@ -4,132 +4,14 @@ import Timeline from "@/components/Timeline/Timeline";
 import TimelinePoint from "@/components/Timeline/TimelinePoint";
 import Image from "next/image";
 
+import {
+  jobTitle,
+  timelineData,
+  skillsData,
+  certificatesData,
+} from "@/data/about-me";
+
 export default function AboutMe() {
-  const jobTitle = ["Business Analyst", "Data Analyst", "System Engineer"];
-
-  const timelineData = [
-    {
-      startDate: "Aug 2019",
-      endDate: "Present",
-      title: "Information Systems",
-      organization: "University of Information Technology - VNUHCMC",
-      description: [
-        "GPA: 8.4/10",
-        "Major in Business Analysis and Information Systems",
-        "Minor in Data Analysis",
-      ],
-    },
-    {
-      startDate: "Jun 2023",
-      endDate: "Sep 2023",
-      title: "Business Analyst Intern",
-      organization: "FPT Software",
-      description: [
-        "Analyzed and documented business requirements",
-        "Created user stories and acceptance criteria",
-        "Collaborated with development team for implementation",
-      ],
-    },
-  ];
-
-  const skillsData = {
-    technical: [
-      {
-        name: "Business Analysis",
-        logo: "/skills/business-analysis.svg",
-      },
-      {
-        name: "Requirements Engineering",
-        logo: "/skills/requirements.svg",
-      },
-      {
-        name: "Data Analysis",
-        logo: "/skills/data-analysis.svg",
-      },
-      {
-        name: "SQL",
-        logo: "/skills/postgresql.jpg",
-      },
-      {
-        name: "Python",
-        logo: "/skills/python.png",
-      },
-      {
-        name: "UML Modeling",
-        logo: "/svgs/uml.svg",
-      },
-    ],
-    business: [
-      {
-        name: "Business Process Modeling",
-        logo: "/svgs/bpm.svg",
-      },
-      {
-        name: "Agile Methodologies",
-        logo: "/svgs/agile.svg",
-      },
-      {
-        name: "Project Management",
-        logo: "/svgs/project-management.svg",
-      },
-      {
-        name: "Stakeholder Management",
-        logo: "/svgs/stakeholder.svg",
-      },
-      {
-        name: "Documentation",
-        logo: "/svgs/documentation.svg",
-      },
-    ],
-    tools: [
-      {
-        name: "JIRA",
-        logo: "/skills/jira.jpg",
-      },
-      {
-        name: "Confluence",
-        logo: "/skills/confluence.jpg",
-      },
-      {
-        name: "Draw.io",
-        logo: "/svgs/drawio.svg",
-      },
-      {
-        name: "Microsoft Office Suite",
-        logo: "/svgs/office.svg",
-      },
-      {
-        name: "Power BI",
-        logo: "/svgs/powerbi.svg",
-      },
-      {
-        name: "Tableau",
-        logo: "/svgs/tableau.svg",
-      },
-    ],
-  };
-
-  const certificatesData = [
-    {
-      name: "ECBA™ (Entry Certificate in Business Analysis)",
-      issuer: "IIBA®",
-      date: "Oct 2023",
-      credentialId: "12345678",
-    },
-    {
-      name: "Professional Scrum Master™ I",
-      issuer: "Scrum.org",
-      date: "Aug 2023",
-      credentialId: "87654321",
-    },
-    {
-      name: "SQL Fundamentals",
-      issuer: "DataCamp",
-      date: "Jul 2023",
-      credentialId: "DC-SQL-123",
-    },
-  ];
-
   return (
     <div className="about-me-container">
       <h1>Lam Mai Tuyen</h1>
