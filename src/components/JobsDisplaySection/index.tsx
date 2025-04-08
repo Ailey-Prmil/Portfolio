@@ -5,17 +5,14 @@ import "./JobsDisplaySection.scss";
 export default function JobsDisplaySection() {
   const demoItems = [
     {
-      link: "#",
       text: "Business Analyst",
       image: "https://picsum.photos/600/400?random=1",
     },
     {
-      link: "#",
       text: "Data Analyst",
       image: "https://picsum.photos/600/400?random=2",
     },
     {
-      link: "#",
       text: "System Engineer",
       image: "https://picsum.photos/600/400?random=3",
     },

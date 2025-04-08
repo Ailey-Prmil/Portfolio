@@ -11,6 +11,7 @@ export const playwrite = Playwrite_AR({
 
 export const dancingScript = Dancing_Script({
   variable: "--font-dancing-script",
+  subsets: ["latin"],
 }); // Dancing Script - accent font
 
 export const fonts = [inter, playwrite, dancingScript]; // All fonts
