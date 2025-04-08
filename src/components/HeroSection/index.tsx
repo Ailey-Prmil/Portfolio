@@ -1,6 +1,7 @@
 "use client";
 import styles from "./heroSection.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
@@ -31,7 +32,17 @@ export default function HeroSection() {
           More About Me!
         </Link>
       </div>
-      <div className={styles.profileImage}></div>
+      <div className={styles.profileImage}>
+        <Image
+          src="/profile.jpg"
+          alt="Profile Picture"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className={styles.image}
+          priority
+        />
+      </div>
     </section>
   );
 }

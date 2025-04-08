@@ -156,7 +156,7 @@ export const skillsData: SkillsData = {
     },
     {
       name: "Miro",
-      logo: "/skills/miro.png",
+      logo: "/skills/miro.jpeg",
     },
     {
       name: "Microsoft Office Suite",
